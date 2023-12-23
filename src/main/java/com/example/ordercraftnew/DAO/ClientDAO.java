@@ -103,7 +103,8 @@ public class ClientDAO implements InterfaceDAOClient {
     }
 
     @Override
-    public Client extractFromResultSet(ResultSet resultSet) throws SQLException {
+    public Client extractFromResultSet(ResultSet resultSet) throws SQLException
+    {
         Client client = new Client();
         client.setId(resultSet.getInt("id"));
         client.setName(resultSet.getString("name"));

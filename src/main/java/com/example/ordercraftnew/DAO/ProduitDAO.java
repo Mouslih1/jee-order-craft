@@ -18,7 +18,6 @@ public class ProduitDAO implements InterfaceDAOProduit {
     private static final String GET_PRODUIT_BY_ID = "SELECT * FROM produits WHERE id = ?";
     private static final String GET_ALL_PRODUITS = "SELECT * FROM produits";
 
-
     @Override
     public void add(Produit produit)
     {
@@ -118,4 +117,5 @@ public class ProduitDAO implements InterfaceDAOProduit {
         produit.setQuantite_produit(resultSet.getInt("quantite_produit"));
         return produit;
     }
+
 }

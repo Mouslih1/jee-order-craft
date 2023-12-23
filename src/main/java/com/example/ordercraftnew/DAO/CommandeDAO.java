@@ -17,6 +17,10 @@ public class CommandeDAO implements InterfaceDAOCommande {
     private static final String UPDATE_COMMANDE = "UPDATE commandes SET id_client=?, address_livraison=?, etat_commande=? WHERE id = ?";
     private static final String GET_COMMANDE_BY_ID = "SELECT * FROM commandes WHERE id = ?";
     private static final String GET_ALL_COMMANDES = "SELECT * FROM commandes";
+    private static final String UPDATE_ETAT = "UPDATE commandes SET etat_commande=? WHERE id = ?";
+
+
+    ClientDAO clientDAO = new ClientDAO();
 
     @Override
     public Commande add(Commande commande)
@@ -118,8 +122,7 @@ public class CommandeDAO implements InterfaceDAOCommande {
     @Override
     public Commande extractFromResultSet(ResultSet resultSet) throws SQLException
     {
-        Commande commande = new Commande();
-        ClientDAO clientDAO = new ClientDAO();
+        Commande commande =  new Commande();
         Client client = clientDAO.getById(resultSet.getInt("id_client"));
         commande.setId(resultSet.getInt("id"));
         commande.setClient(client);
@@ -128,5 +131,19 @@ public class CommandeDAO implements InterfaceDAOCommande {
         commande.setEtat_commande(Etat.valueOf(resultSet.getString("etat_commande")));
 
         return commande;
+    }
+
+    public void updateEtat(Commande commande)
+    {
+        try{
+            PreparedStatement ps = connection.prepareStatement(UPDATE_ETAT);
+            ps.setString(1, commande.getEtat_commande().name());
+            ps.setInt(2, commande.getId());
+
+             ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

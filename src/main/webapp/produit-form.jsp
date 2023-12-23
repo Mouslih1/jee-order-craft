@@ -45,9 +45,9 @@
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-4">
-                                            <label for="email" class="block text-sm font-medium text-gray-700">Description</label>
+                                            <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
                                             <div class="mt-1">
-                                                <textarea id="email" name="email"  rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="description"><%= (produit != null && produit.getDescription() != null) ? produit.getDescription() : "" %></textarea>
+                                                <textarea id="description" name="description"  rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="description"><%= (produit != null && produit.getDescription() != null) ? produit.getDescription() : "" %></textarea>
                                             </div>
                                         </div>
 

@@ -58,4 +58,15 @@ public class CommandeProduit {
     public void setProduit(Produit produit) {
         this.produit = produit;
     }
+
+    @Override
+    public String toString() {
+        return "CommandeProduit{" +
+                "id=" + id +
+                ", commande=" + commande +
+                ", produit=" + produit +
+                ", quantite=" + quantite +
+                ", prix_total=" + prix_total +
+                '}';
+    }
 }

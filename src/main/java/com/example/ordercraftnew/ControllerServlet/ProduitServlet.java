@@ -98,11 +98,6 @@ public class ProduitServlet extends HttpServlet {
         double prix = Double.parseDouble(req.getParameter("prix"));
         int quantite_produit = Integer.parseInt(req.getParameter("quantite_produit"));
         Produit produit = new Produit(id, name, description, prix,quantite_produit);
-       /* produit.setId(id);
-        produit.setName(name);
-        produit.setDescription(description);
-        produit.setPrix(prix);
-        produit.setQuantite_produit(quantite_produit);*/
         produitDao.update(produit);
         resp.sendRedirect("list");
     }

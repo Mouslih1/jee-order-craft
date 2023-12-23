@@ -7,13 +7,13 @@
         commandeProduit = (List<CommandeProduit>) request.getAttribute("commande_produits");
     }
 
+    // Pour récuperer id commande quand j'ai ajouté un produit dans ligne de commande
     Commande commande = null;
     if(request.getAttribute("commande") != null)
     {
         commande = (Commande) request.getAttribute("commande");
     }
 
-    System.out.println(commande);
     List<Client> clients = null;
     if(request.getAttribute("clients") != null)
     {
@@ -199,9 +199,9 @@
                                             <%}%>
                                         </td>
                                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%=c.getDate()%></td>
-                                        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                       <%-- <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                             <a href="#" class="text-indigo-600 hover:text-indigo-900">Add quantity</a>
-                                        </td>
+                                        </td>--%>
                                     </tr>
 
                                     <%
