@@ -63,7 +63,26 @@ Description : Récupère la liste de tous les utilisateurs de la base de donnée
 #Dans les autres class il fait la méme concepte sauf la class login et logout qui contient des methodes qui fait ces fonctionalite et la class commandeProduitServlet continent deux important methode :
 
 ++++++ addQuantity(HttpServletRequest req, HttpServletResponse resp)
-  Extrait l'ID du produit, l'ID de la commande produit et la quantité à ajouter à partir de la requête. Met à jour la quantité commandée et le prix total de la ligne de commande dans la base de données.
+  Extrait l'ID du produit, l'ID de la commande produit et la quantité à ajouter à partir de la requête. Met à jour la quantité commandée et le prix total de la ligne de 
+  commande dans la base de données.
   
 +++++ updateEtat(HttpServletRequest req, HttpServletResponse resp)
   Extrait les informations de la commande à partir de la requête, puis met à jour l'état de la commande dans la base de donné
+
+#Diagramme class :
+
+
+![Class Diagram Realization Example](https://github.com/Mouslih0/jee-order-craft/assets/106397107/91fb1538-4669-4d5c-8594-9477819c10ec)
+
+
+
+
+
+
+
+
+
+
+
+
+
