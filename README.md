@@ -75,10 +75,10 @@ Description : Récupère la liste de tous les utilisateurs de la base de donnée
 ![Class Diagram Realization Example](https://github.com/Mouslih0/jee-order-craft/assets/106397107/91fb1538-4669-4d5c-8594-9477819c10ec)
 
 
+Diagramme Cas d'utilisation :
 
 
-
-
+![UseCaseDiagramGestionCommandes](https://github.com/Mouslih0/jee-order-craft/assets/106397107/8dd5bc71-95b4-4904-a214-ccdc1a42ebd2)
 
 
 
