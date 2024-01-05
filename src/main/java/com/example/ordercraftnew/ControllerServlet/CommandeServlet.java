@@ -61,7 +61,6 @@ public class CommandeServlet extends HttpServlet {
         int id_client = Integer.parseInt(req.getParameter("id_client"));
         String address_livraison = req.getParameter("address_livraison");
         String etat_commande = req.getParameter("etat_commande");
-        System.out.println(etat_commande);
         Commande c = new Commande();
         Client client = clientDAO.getById(id_client);
         c.setClient(client);
@@ -93,7 +92,6 @@ public class CommandeServlet extends HttpServlet {
         List<Client> clients = clientDAO.getAll();
         List<Etat> etats = Arrays.asList(Etat.values());
         List<CommandeProduit> commandeProduits = ligneCommandeDAO.getAll();
-        System.out.println(commandeProduits);
         req.setAttribute("commande_produits", commandeProduits);
         req.setAttribute("etats", etats);
         req.setAttribute("produits", produits);

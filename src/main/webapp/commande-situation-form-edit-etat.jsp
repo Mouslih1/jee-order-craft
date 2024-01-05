@@ -69,12 +69,13 @@
                                     <div class="grid grid-cols-6 gap-6">
                                         <div class="col-span-6 sm:col-span-3">
                                             <label for="id_commande" class="block text-sm font-medium text-gray-700">Commande id</label>
-                                            <input type="text" name="id_commande" readonly disabled placeholder="commande id" value="<%=commande.getId()%>" id="id_commande" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                            <input type="text" name="id_commande" readonly placeholder="commande id" value="<%=commande.getId()%>" id="id_commande" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                         </div>
 
+                                        <input type="hidden" name="id_client" value="<%=client.getId()%>">
                                         <div class="col-span-6 sm:col-span-3">
                                             <label for="client" class="block text-sm font-medium text-gray-700">Client name</label>
-                                            <input type="text" name="client" readonly disabled placeholder="client name" value="<%= client.getName() != null ? client.getName() : "" %>" id="client" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                            <input type="text" name="client" readonly placeholder="client name" value="<%= client.getName() != null ? client.getName() : "" %>" id="client" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                         </div>
 
                                         <div class="col-span-6">
@@ -113,7 +114,7 @@
                                         <div class="col-span-6 sm:col-span-4">
                                             <label for="address_livraison" class="block text-sm font-medium text-gray-700">Address livraison</label>
                                             <div class="mt-1">
-                                                <textarea id="address_livraison" readonly disabled name="address_livraison"  rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="address livraison"><%= commande.getAddress_livraison() != null ? commande.getAddress_livraison() : "" %></textarea>
+                                                <textarea id="address_livraison" readonly  name="address_livraison"  rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="address livraison"><%= commande.getAddress_livraison() != null ? commande.getAddress_livraison() : "" %></textarea>
                                             </div>
                                         </div>
                                         <div class="col-span-6">

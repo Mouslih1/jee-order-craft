@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/login")
+@WebServlet(name = "login" , urlPatterns = {"/login", "/login/*"})
 public class LoginServlet extends HttpServlet {
 
     @Override

@@ -14,7 +14,7 @@ public class UserDAO implements InterfaceDAOUser{
     static Connection connection = DataBaseConnection.getConnection();
     private static final String INSERT_USER = "INSERT INTO users(name, email,password) VALUES (?, ?, ?)";
     private static final String DELETE_USER = "DELETE FROM users WHERE id = ?";
-    private static final String UPDATE_USER = "UPDATE clients SET name=?, email=?, password=? WHERE id = ?";
+    private static final String UPDATE_USER = "UPDATE users SET name=?, email=?, password=? WHERE id = ?";
     private static final String GET_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
     private static final String GET_ALL_USERS = "SELECT * FROM users";
 

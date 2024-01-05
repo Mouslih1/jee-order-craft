@@ -111,12 +111,12 @@ public class CommandeProduitsServlet extends HttpServlet {
 
     private void updateEtat(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException
     {
-        int id_commande = Integer.parseInt(req.getParameter("id_commande"));
         int id_client = Integer.parseInt(req.getParameter("id_client"));
+        int id_commande = Integer.parseInt(req.getParameter("id_commande"));
         String address_livraison = req.getParameter("address_livraison");
         String etat_commande = req.getParameter("etat_commande");
-        Commande c = new Commande();
         Client client = clientDAO.getById(id_client);
+        Commande c = new Commande();
         c.setId(id_commande);
         c.setClient(client);
         c.setAddress_livrison(address_livraison);

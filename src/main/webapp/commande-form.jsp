@@ -130,12 +130,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
-                                       <%-- <div class="col-span-6 sm:col-span-4">
-                                            <label for="quantite_commander" class="block text-sm font-medium text-gray-700">Quantity product</label>
-                                            <input type="number" name="quantite_commander" min="0" placeholder="quantite commander" value="" id="quantite_commander" autocomplete="quantite_commander" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                        </div>
---%>
                                     </div>
                                 </div>
                                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -145,7 +139,6 @@
                         </form>
                     </div>
                 </div>
-
 
                 <% if(commandeProduit != null){%>
                 <div class="sm:flex-auto">
@@ -199,9 +192,6 @@
                                             <%}%>
                                         </td>
                                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%=c.getDate()%></td>
-                                       <%-- <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                            <a href="#" class="text-indigo-600 hover:text-indigo-900">Add quantity</a>
-                                        </td>--%>
                                     </tr>
 
                                     <%
